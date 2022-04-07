@@ -8,9 +8,15 @@ import Typography from "@material-ui/core/Typography";
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import ButtonAdd from "./ButtonAdd";
+import Breadcrumb from "../../components/Breadcrumbs";
+
+
 export default function DetailProduit() {
   return (
-    <Grid container spacing={3}>
+    <>
+     <Breadcrumb/>
+     <Box mt={2}/>
+      <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={6}>
         <Card sx={{ maxWidth: 500 }}>
           <CardMedia
@@ -20,8 +26,7 @@ export default function DetailProduit() {
             image="https://www.journaldugeek.com/content/uploads/2017/10/fran%C3%A7ais-publicit%C3%A9-smartphone.jpg"
           />
         </Card>
-        <Box mt={4}>
-        </Box>
+        <Box mt={1}/>
       </Grid>
       
       <Grid item xs={12} sm={6} md={6}>
@@ -32,15 +37,8 @@ export default function DetailProduit() {
           order. Dates may change based on delivery address, availability and if
           multiple items are shipped.
           <Box pt={2}/>
+          <Typography >1 000 GNF</Typography>
           <ButtonAdd/>
-        </Box>
-        <Box pt={4}/>
-        <Box border={1} pt={2} pb={2} textAlign="center">
-        <Typography>Produit Detail</Typography>
-          Delivery Earliest Delivery Friday, April 8 Delivery ZIP Code: 98101
-          Change Your delivery date is not secured until you complete your
-          order. Dates may change based on delivery address, availability and if
-          multiple items are shipped.
         </Box>
         <Box pt={4}/>
         <Button
@@ -50,5 +48,6 @@ export default function DetailProduit() {
         </Button>
       </Grid>
     </Grid>
+    </>
   );
 }
