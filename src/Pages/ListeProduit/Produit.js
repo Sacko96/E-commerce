@@ -4,12 +4,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import { Link as ReactRouteLink } from "react-router-dom";
 
  const Produit = ({cotegorie}) => {
     console.log(cotegorie);
   return (
     <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea style={{display:"flex"}}>
+      <CardActionArea style={{display:"flex"}} component={ReactRouteLink}  to={`/DetailProduit/${cotegorie.id}`}>
         <CardMedia
           component="img"
           height="140"
@@ -21,7 +22,7 @@ import { CardActionArea } from '@mui/material';
            {cotegorie.nom}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread 
+          {cotegorie.description}
           </Typography>
         </CardContent>
       </CardActionArea>

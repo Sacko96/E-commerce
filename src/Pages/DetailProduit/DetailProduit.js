@@ -1,7 +1,5 @@
 import * as React from "react";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -10,8 +8,8 @@ import { Box } from "@mui/system";
 import ButtonAdd from "./ButtonAdd";
 import Breadcrumb from "../../components/Breadcrumbs";
 
-
-export default function DetailProduit() {
+ const DetailProduit = ({detail}) => {
+   console.log(detail);
   return (
     <>
      <Breadcrumb/>
@@ -23,7 +21,7 @@ export default function DetailProduit() {
             component="img"
             alt="green iguana"
             height="250"
-            image="https://www.journaldugeek.com/content/uploads/2017/10/fran%C3%A7ais-publicit%C3%A9-smartphone.jpg"
+            image={detail?.photo}
           />
         </Card>
         <Box mt={1}/>
@@ -31,13 +29,10 @@ export default function DetailProduit() {
       
       <Grid item xs={12} sm={6} md={6}>
         <Box border={1} pt={2} pb={2} textAlign="center">
-          <Typography>Delivery Detail</Typography>
-          Delivery Earliest Delivery Friday, April 8 Delivery ZIP Code: 98101
-          Change Your delivery date is not secured until you complete your
-          order. Dates may change based on delivery address, availability and if
-          multiple items are shipped.
+          <Typography>{detail?.nom}</Typography>
+                {detail?.title}
           <Box pt={2}/>
-          <Typography >1 000 GNF</Typography>
+          <Typography >{detail?.price} GNF</Typography>
           <ButtonAdd/>
         </Box>
         <Box pt={4}/>
@@ -51,3 +46,4 @@ export default function DetailProduit() {
     </>
   );
 }
+export default DetailProduit;

@@ -60,7 +60,7 @@ const routes = [
       },
       {
         exact: true,
-        path: "/DetailProduit",
+        path: "/DetailProduit/:key",
         component: lazy(() => import("./Pages/DetailProduit")),
       },
       {

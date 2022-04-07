@@ -75,14 +75,12 @@ const data2 = [
 const ListeProduit = (props) => {
   const initialState = []
   const [listcategorie, setListCategorie] = useState(initialState)
-  const [listcategorie1, setListCategorie1] = useState(initialState)
   React.useEffect(() => {
     async function fetchData() {
       const key = props.match.params.key;
       try {
         const response = await axios.get(`http://localhost:8000/sousCategorie?slug=${key}`)
         setListCategorie(response.data)
-        setListCategorie1(response.data)
         // }
       } catch (err) {}
     }

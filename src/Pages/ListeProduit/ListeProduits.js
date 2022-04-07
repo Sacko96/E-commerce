@@ -19,7 +19,7 @@ const ListeProduits = ({ cotegories }) => {
               <Grid item xs={12}>
                 <Typography
                   style={{
-                    textAlign:"center",
+                    // textAlign:"center",
                     fontSize: "16px",
                     fontWeight: "bold",
                     paddingBottom: 10,

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import _ from "lodash";
 import Page from "../../components/Page";
 import {
   Box,
@@ -15,18 +17,31 @@ const useStyles = makeStyles((theme) => ({
  
 }));
 
-export default function BtnHelp() {
+const BtnHelp = (props) => {
   const classes = useStyles();
-
+  const initialState = []
+  const [detailproduit, setDetailProduit] = useState(initialState)
+  React.useEffect(() => {
+    async function fetchData() {
+      const key = props.match.params.key;
+      console.log(key);
+      try {
+        const response = await axios.get(`http://localhost:8000/sousCategorie?id=${key}`)
+        setDetailProduit(response.data)
+        // }
+      } catch (err) {}
+    }
+    fetchData()
+  }, [])
+  console.log(detailproduit)
   return (
     <Page className={classes.root} >
-      
-
       <Container maxWidth="lg">
       <Box pt={4}/>
-        <DetailProduit/>
+        <DetailProduit detail={detailproduit}/>
         <Box pt={10}/>
       </Container>
     </Page>
   );
 }
+export default BtnHelp;
