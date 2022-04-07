@@ -1,9 +1,279 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+  "categorie": [
+    {
+      "id": 1,
+      "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS589TfupGdHO3Iu9js85ouZV8NMXSIFR8PyA&usqp=CAU",
+      "title": "Ecouteur",
+      "slug": "Écouteurs"
+    },
+    {
+      "id": 2,
+      "photo":"https://sc04.alicdn.com/kf/Hcb6688aedc7d4b20a02335b4537cdf10W.jpg",
+      "title": "Telephone",
+      "slug": "Telephone"
+    },
+    {
+      "id": 3,
+      "photo":"https://www.presse-citron.net/app/uploads/2018/11/meilleure-banque-image.jpg",
+      "title": "Pochette",
+      "slug": "Pochettes"
+    },
+    {
+      "id": 4,
+      "photo":"https://progsm.tn/wp-content/uploads/2020/06/ipx.jpg",
+      "title": "Anti-casse",
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 5,
+      "photo":"https://st.depositphotos.com/1035350/2983/i/600/depositphotos_29836689-stock-photo-mt-fuji-in-the-autumn.jpg",
+      "title": "Chargeur",
+      "slug": "Chargeurs"
+    },
+    {
+      "id": 6,
+      "photo":"https://deep-image.ai/assets/image-realestate.ea3f2c18.webp",
+      "title": "Autres",
+      "slug": "Autres"
+    }
+  ],
+  "sousCategorie": [
+    {
+      "id": 1,
+      "photo": "https://blog.pieces2mobile.com/wp-content/uploads/2020/07/rock-space-film-de-protection-hydrogel-anti-casse-matte-lot-x50-1.jpg",
+      "title": "Glass 21D Samsung",
+      "nom": "A10",
+      "description": "hshshshs",
+      "price": 7000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 2,
+      "photo": "https://progsm.tn/wp-content/uploads/2020/06/ipx.jpg",
+      "title": "Glass 21D Samsung",
+      "nom": "A10S",
+      "description": "hshshshs",
+      "price": 5000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 3,
+      "photo": "https://cdn.store-factory.com/www.lapommediscount.com/content/product_10849422b.jpg?v=1571215047",
+      "title": "Glass 21D Samsung",
+      "nom": "A11",
+      "description": "hshshshs",
+      "price": 9000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 4,
+      "photo": "https://www.wiki.tn/30045-thickbox_default/film-anti-casse-glass-pour-s9.jpg",
+      "title": "Glass Tecno",
+      "nom": "F1",
+      "description": "hshshshs",
+      "price": 7000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 5,
+      "photo": "https://www.wiki.tn/30044/film-anti-casse-glass-pour-s9.jpg",
+      "title": "Glass Tecno",
+      "nom": "pop2f",
+      "description": "hshshshs",
+      "price": 8000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 6,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8auzLhi5KuyOVQAAPjafKQkzCgvrCs61l4g&usqp=CAU",
+      "title": "Glass Tecno",
+      "nom": "pop2+",
+      "description": "hshshshs",
+      "price": 3000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 7,
+      "photo": "https://tn.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/62/3753/2.jpg?4483",
+      "title": "Glass IPhone",
+      "nom": "11proMax",
+      "description": "hshshshs",
+      "price": 11000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 8,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4qYIDLl-oNQEk0xblGG6iMXU2Yz_NMug2Q&usqp=CAU",
+      "title": "Glass IPhone",
+      "nom": "12pro",
+      "description": "hshshshs",
+      "price": 12000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 9,
+      "photo": "https://tn.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/63/1392/1.jpg?1192",
+      "title": "Glass IPhone",
+      "nom": "12proMax",
+      "description": "hshshshs",
+      "price": 6000,
+      "slug": "Anti-casses"
+    },
+    {
+      "id": 10,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFWD_mGi_YBB_gCVDfvMS17pqCNsHLCSzDQA&usqp=CAU",
+      "title": "Pochette Samsung silicon",
+      "nom": "A32",
+      "description": "hshshshs",
+      "price": 8000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 11,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-uEUsiZcCb2BZtZsnriM8ruHbS7hUSfBE3KFgLMOzerVjKLrngXIrR6Wx1EZ0ZTLSZ0&usqp=CAU",
+      "title": "Pochette Samsung silicon",
+      "nom": "A40",
+      "description": "hshshshs",
+      "price": 4000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 12,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5EZdWTCuZElRu3VXF_4DnDgUtdZZwHcaDwfyQGjHDPAeHXZowcHlmkC9zUpZ7ugzI6Uc&usqp=CAU",
+      "title": "Pochette Samsung silicon",
+      "nom": "J4",
+      "description": "hshshshs",
+      "price": 9000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 13,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4SzWJQRqCNDEF2xM-KB-Okphg-9jgEeo_A&usqp=CAU",
+      "title": "Pochette Tecno silicon",
+      "nom": "camon15",
+      "description": "hshshshs",
+      "price": 5000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 14,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJx52h7bq2ZzEChRBjmI5No3vsVcoad-146g&usqp=CAU",
+      "title": "Pochette Tecno silicon",
+      "nom": "pop4pro",
+      "description": "hshshshs",
+      "price": 4000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 15,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT92jeJgG1jn9vMlr4qzLxwNOO8ZmrkGlI0JQ&usqp=CAU",
+      "title": "Pochette Tecno silicon",
+      "nom": "camon18i",
+      "description": "hshshshs",
+      "price": 9000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 16,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWfGgAfxPKju9RCWUy0jYvTpnY1E6pk2iTag&usqp=CAU",
+      "title": "Pochette IPhone silicon",
+      "nom": "7",
+      "description": "hshshshs",
+      "price": 5000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 18,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkHPqjA2wJ0gD7yFnJ8nc2sRHDLot3LK8qDg&usqp=CAU",
+      "title": "Pochette IPhone silicon",
+      "nom": "11pro",
+      "description": "hshshshs",
+      "price": 4000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 19,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVjwILmiEtSCPaGEmG_6eIMNr8eGHjJe5dmg&usqp=CAU",
+      "title": "Pochette IPhone silicon",
+      "nom": "xr",
+      "description": "hshshshs",
+      "price": 9000,
+      "slug": "Pochettes"
+    },
+    {
+      "id": 20,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9g0qCrAP-YaqfzwUxRpiPj7EcuS15hrB2Kw&usqp=CAU",
+      "title": "pro",
+      "nom": "Pro5",
+      "description": "hshshshs",
+      "price": 5000,
+      "slug": "Écouteurs"
+    },
+    {
+      "id": 21,
+      "photo": "https://www.cdiscount.com/pdt2/4/8/7/1/700x700/gob8588685117487/rw/xiaomi-redmi-airdots-2-ecouteur-sans-fil-bluetoo.jpg",
+      "title": "pro",
+      "nom": "pro9",
+      "description": "hshshshs",
+      "price": 10000,
+      "slug": "Écouteurs"
+    },
+    {
+      "id": 22,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxo7eUmdLI58-PvSlAYj4TvDn5Hz6tBMQxjA&usqp=CAU",
+      "title": "SamsungE",
+      "nom": "Pro5",
+      "description": "hshshshs",
+      "price": 5000,
+      "slug": "Écouteurs"
+    },
+    {
+      "id": 23,
+      "photo": "https://m.media-amazon.com/images/I/51iK1b-dJ2L._AC_SY355_.jpg",
+      "title": "SamsungE",
+      "nom": "pro9",
+      "description": "hshshshs",
+      "price": 10000,
+      "slug": "Écouteurs"
+    },
+    {
+      "id": 24,
+      "photo": "https://m.media-amazon.com/images/I/51nbCD2ofEL._AC_SY355_.jpg",
+      "title": "Bts",
+      "nom": "Pro5",
+      "description": "hshshshs",
+      "price": 5000,
+      "slug": "Écouteurs"
+    },
+    {
+      "id": 25,
+      "photo": "https://www.cdiscount.com/pdt2/6/8/5/1/700x700/auc6482607381685/rw/chargeurs-original-huawei-telephone-portable-charg.jpg",
+      "title": "SamsungC",
+      "nom": "pro9",
+      "description": "hshshshs",
+      "price": 10000,
+      "slug": "Chargeurs"
+    },
+    {
+      "id": 26,
+      "photo": "https://www.maison-travaux.fr/wp-content/uploads/sites/8/2021/09/shutterstock_2010090464-615x410.jpg",
+      "title": "tecno",
+      "nom": "Pro5",
+      "description": "hshshshs",
+      "price": 5000,
+      "slug": "Chargeurs"
+    },
+    {
+      "id": 23,
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaNsB600cEtLI4AOnRs8utFjPsJ8TlD8CGUw&usqp=CAU",
+      "title": "tecno",
+      "nom": "pro9",
+      "description": "hshshshs",
+      "price": 10000,
+      "slug": "Chargeurs"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}

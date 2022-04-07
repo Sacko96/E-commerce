@@ -1,9 +1,12 @@
-import { Box, Container, Grid, Typography } from "@material-ui/core";
-import React from "react";
+
+import React, { useState } from "react";
+import axios from "axios";
+import _ from "lodash";
+import { Box, Container,Typography } from "@material-ui/core";
 import Card1 from "./Card1";
 import Card2 from "./Card2";
 import Card3 from "./Card3";
-import Card4 from "./Card4";
+import ListeProduits from "./ListeProduits";
 const data = [
   {
     img: "https://st.depositphotos.com/1035350/2983/i/600/depositphotos_29836689-stock-photo-mt-fuji-in-the-autumn.jpg",
@@ -69,17 +72,47 @@ const data2 = [
     },
    
   ];
-function HomeView () {
+const ListeProduit = (props) => {
+  const initialState = []
+  const [listcategorie, setListCategorie] = useState(initialState)
+  const [listcategorie1, setListCategorie1] = useState(initialState)
+  React.useEffect(() => {
+    async function fetchData() {
+      const key = props.match.params.key;
+      try {
+        const response = await axios.get(`http://localhost:8000/sousCategorie?slug=${key}`)
+        setListCategorie(response.data)
+        setListCategorie1(response.data)
+        // }
+      } catch (err) {}
+    }
+    fetchData()
+  }, [])
+  // console.log(listcategorie)
+
+
+  const cotegories = _.groupBy(
+    listcategorie.filter((categorie) => {
+      return categorie;
+    }),
+    "title"
+  );
+  console.log(cotegories);
+
   return (
     <>
       <Container maxWidth="xlg">
-        <Grid container spacing={3}>
+      <Box mt={4} mb={4}>
+          <ListeProduits cotegories={cotegories} />
+        </Box>
+        {/* <Grid container spacing={3}>
           {data.map((liste) => (
             <Grid item md={2} sm={3} xs={6}>
               <Card1 liste={liste} />
             </Grid>
           ))}
-        </Grid>
+        </Grid> */}
+         {/*
         <Box mt={3}/>
         <Typography style={{fontSize:"30px"}}>Les meilleurs produitsff</Typography>
         <Grid container spacing={3}>
@@ -117,9 +150,9 @@ function HomeView () {
             </Grid>
           ))}
         </Grid>
-        <Box mt={5}/>
+        <Box mt={5}/> */}
       </Container>
     </>
   );
 }
-export default HomeView;
+export default ListeProduit;

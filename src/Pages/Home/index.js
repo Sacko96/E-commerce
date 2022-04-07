@@ -1,53 +1,10 @@
 import { Box, Container, Grid, Typography } from "@material-ui/core";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Slider from "./Slider";
 import ListeCategorie from "./ListeCategorie";
 import Card1 from "./Card1";
 import Card2 from "./Card2";
-
 import axios from "axios";
-import useIsMountedRef from "../../hooks/useIsMountedRef";
-import { fontSize } from "@mui/system";
-
-
-const data = [
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS589TfupGdHO3Iu9js85ouZV8NMXSIFR8PyA&usqp=CAU",
-    nom: "Ecouteur",
-    slug:"1",
-
-  },
-  {
-    img: "https://sc04.alicdn.com/kf/Hcb6688aedc7d4b20a02335b4537cdf10W.jpg",
-    nom: "Telephone",
-    slug:"2",
-
-  },
-  {
-    img: "https://www.presse-citron.net/app/uploads/2018/11/meilleure-banque-image.jpg",
-    nom: "Pochette",
-    slug:"3",
-
-  },
-  {
-    img: "https://progsm.tn/wp-content/uploads/2020/06/ipx.jpg",
-    nom: "Anti-casse",
-    slug:"4",
-
-  },
-  {
-    img: "https://st.depositphotos.com/1035350/2983/i/600/depositphotos_29836689-stock-photo-mt-fuji-in-the-autumn.jpg",
-    nom: "Chargeur",
-    slug:"5",
-
-  },
-  {
-    img: "https://deep-image.ai/assets/image-realestate.ea3f2c18.webp",
-    nom: "Autre",
-    slug:"6",
-
-  },
-];
 
 const data2 = [
   {
@@ -77,7 +34,21 @@ const data2 = [
 
 ];
 
-function HomeView() {
+const HomeView = () => {
+
+    const initialState = []
+    const [categorie, setCategorie] = useState(initialState)
+    React.useEffect(() => {
+      async function fetchData() {
+        try {
+          const response = await axios.get(`http://localhost:8000/categorie`)
+          setCategorie(response.data)
+          // }
+        } catch (err) {}
+      }
+      fetchData()
+    }, [])
+    console.log(categorie)
 
 
   return (
@@ -94,14 +65,7 @@ function HomeView() {
         </Grid>
 
         <Typography style={{textAlign:"center" ,fontSize:"30px"}}>Catégorie</Typography>
-        <Grid container spacing={3}>
-          {data.map((liste) => (
-            <Grid item md={6} sm={6} xs={12}>
-              <ListeCategorie liste={liste} />
-            </Grid>
-          ))}
-        </Grid>
-
+         <ListeCategorie liste={categorie} />
       </Container>
       
       <Box mt={4}/>
