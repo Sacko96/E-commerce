@@ -23,7 +23,7 @@ export default function BtnHelp() {
       
 
       <Container maxWidth="lg">
-      <Box pt={10}/>
+      <Box pt={4}/>
         <DetailProduit/>
         <Box pt={10}/>
       </Container>
