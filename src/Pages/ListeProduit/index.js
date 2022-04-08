@@ -11,6 +11,7 @@ const ListeProduit = (props) => {
   React.useEffect(() => {
     async function fetchData() {
       const key = props.match.params.key;
+      // console.log(key);
       try {
         const response = await axios.get(`http://localhost:8000/sousCategorie?slug=${key}`)
         setListCategorie(response.data)
@@ -18,7 +19,7 @@ const ListeProduit = (props) => {
       } catch (err) {}
     }
     fetchData()
-  }, [])
+  }, [listcategorie])
 
   const cotegories = _.groupBy(
     listcategorie.filter((categorie) => {

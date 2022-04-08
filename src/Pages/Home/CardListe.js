@@ -7,7 +7,7 @@ const CardListe = ({listes}) => {
 return (
 <Grid container spacing={3}>
           {listes.map((liste) => (
-            <Grid item md={3} sm={3} xs={12}>
+            <Grid item md={3} sm={4} xs={12}>
               <CardPage liste={liste} />
             </Grid>
           ))}

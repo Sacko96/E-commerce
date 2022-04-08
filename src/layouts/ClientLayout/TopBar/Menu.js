@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Badge from "@material-ui/core/Badge";
 import { withStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
@@ -14,6 +14,12 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { Typography } from "@mui/material";
+import Link from '@mui/material/Link';
+import axios from "axios";
+import _ from "lodash";
+import { Link as ReactRouteLink } from "react-router-dom";
+
+
 const useStyles = makeStyles((theme) => ({
   mobileDrawer: {
     width: 256,
@@ -32,8 +38,25 @@ const useStyles = makeStyles((theme) => ({
     height: 64,
   },
 }));
+const preventDefault = (event) => event.preventDefault();
 
-export default function Menu() {
+const Menu = () => {
+
+
+  const initialState = [];
+  const [categorie, setCategorie] = useState(initialState);
+  React.useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(`http://localhost:8000/categorie`);
+        setCategorie(response.data);
+        // }
+      } catch (err) { }
+    }
+    fetchData();
+  }, []);
+  console.log(categorie);
+
   const classes = useStyles();
   const [state, setState] = React.useState({ left: false });
 
@@ -102,8 +125,8 @@ export default function Menu() {
 
       <Typography
         style={{
-          fontSize: "20px",
-          textAlign: "center",
+          fontSize: "16px",
+          marginLeft: 50,
           paddingTop: "10px",
           fontWeight: "bold",
         }}
@@ -111,18 +134,27 @@ export default function Menu() {
         Catégories
       </Typography>
 
-      <List>
-        {["Ecouteur", "Chargeur", "Anti-casse", "Téléphone", "Autres"].map(
-          (text, index) => (
-            <ListItem button key={text}>
-              {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
-              <ListItemText primary={text} />
-            </ListItem>
-          )
-        )}
-      </List>
+      {categorie.map((text) => {
+        return (
+          <Box
+          style={{marginBottom:7}}
+            sx={{
+              typography: 'body1',
+              '& > :not(style) + :not(style)': {
+                ml: 2,
+              },
+            }}
+            onClick={preventDefault}
+          >
+            <Link style={{
+              fontSize: 18,
+               marginLeft: 50,
+               color:"black",
+               textDecoration: "none"            }}
+              component={ReactRouteLink} to={`/ListeProduit/${text.slug}`}>{text.title}</Link>
+          </Box>
+        );
+      })}
     </Box>
   );
 
@@ -158,3 +190,4 @@ export default function Menu() {
     </>
   );
 }
+export default Menu;
