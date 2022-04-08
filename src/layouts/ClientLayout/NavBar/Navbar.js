@@ -1,14 +1,7 @@
-import Logo from "../../../components/Logo";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { Link as ReactRouteLink } from "react-router-dom";
-import React, { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import React from "react";
 import Hidden from "@material-ui/core/Hidden";
-import { Button, Link, withWidth, Box } from "@material-ui/core";
-import { IoCloseOutline } from "react-icons/io5";
-import { FiSearch } from "react-icons/fi";
-import FaUserAlt from '@material-ui/icons/AccountCircleOutlined';
+import {withWidth, Box } from "@material-ui/core";
 import Recherche from "../TopBar/Recherche";
 import Menu from "../TopBar/Menu";
 

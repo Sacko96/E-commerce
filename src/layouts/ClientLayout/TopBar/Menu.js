@@ -1,20 +1,14 @@
 import React from "react";
 import Badge from "@material-ui/core/Badge";
-import { withStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Box } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import { Drawer, makeStyles } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import { Typography } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({

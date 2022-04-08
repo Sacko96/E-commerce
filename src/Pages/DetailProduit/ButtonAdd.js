@@ -35,26 +35,10 @@ const useStyles = makeStyles((theme) => ({
 
 const ButtonAdd = () => {
   const classes = useStyles();
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   return (
     <div className={classes.root}>
-      {/* <IconButton
-        disabled={count === 1}
-        className={classes.iconBtn}
-        onClick={() => setCount(count - 1)}
-      >
-        <Remove />
-      </IconButton>
-
-      <span className={classes.value}>{count}</span>
-
-      <IconButton
-        className={classes.iconBtn}
-        onClick={() => setCount(count + 1)}
-      >
-        <Add />
-      </IconButton> */}
       <Box className={classes.btn}>
         <Button disabled={count === 1} onClick={() => setCount(count - 1)}>
           <Remove />

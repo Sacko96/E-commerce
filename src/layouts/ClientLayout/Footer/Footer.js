@@ -23,7 +23,7 @@ const useStyles = makeStyles(({ palette, typography }) => ({
   
 }));
 
-function Footer() {
+const Footer = () => {
   const classes = useStyles();
 
   return (

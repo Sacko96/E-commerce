@@ -33,7 +33,6 @@ const BtnHelp = (props) => {
     }
     fetchData()
   }, [])
-  console.log(detailproduit)
   return (
     <Page className={classes.root} >
       <Container maxWidth="lg">
