@@ -57,8 +57,8 @@ function Slider() {
   };
 
   return (
+    
     <Box sx={{ maxWidth: "100%", flexGrow: 1 }}>
-     
         <AutoPlaySwipeableViews
           axis={theme.direction === "rtl" ? "x-reverse" : "x"}
           index={activeStep}

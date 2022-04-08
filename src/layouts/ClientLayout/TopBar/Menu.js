@@ -3,14 +3,12 @@ import Badge from "@material-ui/core/Badge";
 import IconButton from "@material-ui/core/IconButton";
 import { Box } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-
-import { Drawer, makeStyles } from "@material-ui/core";
+import { Drawer, makeStyles, Avatar } from "@material-ui/core";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { Typography } from "@mui/material";
-
 const useStyles = makeStyles((theme) => ({
   mobileDrawer: {
     width: 256,
@@ -19,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     width: 240,
     top: 64,
     height: "calc(100% - 64px)",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       top: 120,
     },
   },
@@ -52,21 +50,14 @@ export default function Menu() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <Typography
-        style={{
-          fontSize: "20px",
-          textAlign: "center",
-          paddingTop: "10px",
-          fontWeight: "bold",
-        }}
-      >
-        Profil
-      </Typography>
+      <Box display="flex" justifyContent="center" mt={2}>
+        <Avatar />
+      </Box>
       <Typography
         style={{
           fontSize: "15px",
           paddingTop: "10px",
-          paddingLeft: "10px",
+          textAlign: "center",
         }}
       >
         Idris Sacko
@@ -101,7 +92,7 @@ export default function Menu() {
       >
         Liste des commandes
       </Typography>
-      <Box pt={2}/>
+      <Box pt={2} />
       <Divider />
 
       <Typography
@@ -112,18 +103,20 @@ export default function Menu() {
           fontWeight: "bold",
         }}
       >
-       Catégories
+        Catégories
       </Typography>
 
       <List>
-        {["Ecouteur", "Chargeur", "Anti-casse", "Téléphone","Autres"].map((text, index) => (
-          <ListItem button key={text}>
-            {/* <ListItemIcon>
+        {["Ecouteur", "Chargeur", "Anti-casse", "Téléphone", "Autres"].map(
+          (text, index) => (
+            <ListItem button key={text}>
+              {/* <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon> */}
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+              <ListItemText primary={text} />
+            </ListItem>
+          )
+        )}
       </List>
     </Box>
   );
