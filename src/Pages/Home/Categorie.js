@@ -40,9 +40,9 @@ const Categorie = ({ liste }) => {
   const classes = useStyles();
   console.log(liste);
   return (
-    <Card>
-      <CardActionArea variant="body2"  component={ReactRouteLink}  to={`/ListeProduit/${liste.slug}`}>
-        <CardMedia className={classes.media} image={liste.photo} />
+    <Card style={{width:"100%",height:"100%" }}>
+      <CardActionArea  variant="body2"  component={ReactRouteLink}  to={`/ListeProduit/${liste.slug}`}>
+        <CardMedia  className={classes.media} image={liste.photo} />
         <Box className={classes.Sbg}>
           <Typography align="center" gutterBottom variant="h5" component="h2">
             <Link variant="body2" style={{ color: "white", fontSize: "25px" }}>

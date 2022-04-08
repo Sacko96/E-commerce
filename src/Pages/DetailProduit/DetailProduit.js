@@ -11,7 +11,7 @@ import { formatMoney } from "../../utils/common";
 
  const DetailProduit = ({detail}) => {
   return (
-    <>
+    <Card style={{width:"100%",height:"100%" }}>
      <Breadcrumb/>
      <Box mt={2}/>
       <Grid container spacing={3}>
@@ -20,7 +20,7 @@ import { formatMoney } from "../../utils/common";
           <CardMedia
             component="img"
             alt="green iguana"
-            height="250"
+            sx={{ width: "40%"}}
             image={detail[0]?.photo}
           />
         </Card>
@@ -46,7 +46,7 @@ import { formatMoney } from "../../utils/common";
         </Button>
       </Grid>
     </Grid>
-    </>
+    </Card>
   );
 }
 export default DetailProduit;
