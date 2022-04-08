@@ -4,7 +4,6 @@ import IconButton from "@material-ui/core/IconButton";
 import { Box } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Drawer, makeStyles, Avatar } from "@material-ui/core";
-import { Drawer, makeStyles } from "@material-ui/core";
 import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
