@@ -7,7 +7,7 @@ const ListeCategorie = ({ liste }) => {
   return (
     <Grid container spacing={3}>
       {liste.map((liste) => (
-        <Grid item md={6} sm={6} xs={12}>
+        <Grid item md={4} sm={4} xs={12}>
           <Categorie liste={liste} />
         </Grid>
       ))}
