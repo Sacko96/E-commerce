@@ -7,9 +7,9 @@ import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import ButtonAdd from "./ButtonAdd";
 import Breadcrumb from "../../components/Breadcrumbs";
+import { formatMoney } from "../../utils/common";
 
  const DetailProduit = ({detail}) => {
-   console.log(detail);
   return (
     <>
      <Breadcrumb/>
@@ -21,7 +21,7 @@ import Breadcrumb from "../../components/Breadcrumbs";
             component="img"
             alt="green iguana"
             height="250"
-            image={detail?.photo}
+            image={detail[0]?.photo}
           />
         </Card>
         <Box mt={1}/>
@@ -29,10 +29,13 @@ import Breadcrumb from "../../components/Breadcrumbs";
       
       <Grid item xs={12} sm={6} md={6}>
         <Box border={1} pt={2} pb={2} textAlign="center">
-          <Typography>{detail?.nom}</Typography>
-                {detail?.title}
-          <Box pt={2}/>
-          <Typography >{detail?.price} GNF</Typography>
+          <Typography style={{fontWeight:"bold",fontSize:24}}> {detail[0]?.title}</Typography>
+          <Typography style={{fontWeight:"bold",fontSize:15}}>{detail[0]?.nom}</Typography>
+          <Box pt={1}/>
+          <Typography> {detail[0]?.description}</Typography>
+          <Box pt={1}/>
+          <Typography style={{fontWeight:"bold",fontSize:15}}>{formatMoney(detail[0]?.price)} GNF</Typography>
+          <Box pt={1}/>
           <ButtonAdd/>
         </Box>
         <Box pt={4}/>

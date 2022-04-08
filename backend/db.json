@@ -264,13 +264,31 @@
       "slug": "Chargeurs"
     },
     {
-      "id": 23,
+      "id": 27,
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaNsB600cEtLI4AOnRs8utFjPsJ8TlD8CGUw&usqp=CAU",
       "title": "tecno",
       "nom": "pro9",
       "description": "hshshshs",
       "price": 10000,
       "slug": "Chargeurs"
+    },
+    {
+      "id": 28,
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Samsung_Galaxy_S10%2B.jpg/1200px-Samsung_Galaxy_S10%2B.jpg",
+      "title": "Tecno",
+      "nom": "Android 4 Go double",
+      "description": "Profitez des avantages de notre carte Cdiscount 30% de remise supplémentaire en souscrivant",
+      "price": 1500000,
+      "slug": "Telephone"
+    },
+    {
+      "id": 29,
+      "photo": "https://www.ikea.com/fr/fr/images/products/bergenes-support-telephone-portable-tablette-bambou__0948313_pe798953_s5.jpg",
+      "title": "Samsung",
+      "nom": "Android 32 Go double",
+      "description": "Profitez des avantages de notre carte Cdiscount 30% de remise supplémentaire en souscrivant",
+      "price": 5000000,
+      "slug": "Telephone"
     }
   ],
   "profile": {

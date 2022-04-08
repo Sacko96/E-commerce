@@ -5,15 +5,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { Link as ReactRouteLink } from "react-router-dom";
+import { formatMoney } from "../../utils/common";
 
  const Produit = ({cotegorie}) => {
-    console.log(cotegorie);
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card style={{width:"100%" }}>
       <CardActionArea style={{display:"flex"}} component={ReactRouteLink}  to={`/DetailProduit/${cotegorie.id}`}>
         <CardMedia
           component="img"
-          height="140"
+          height="200"
           image={cotegorie.photo}
           alt="green iguana"
         />
@@ -23,6 +23,9 @@ import { Link as ReactRouteLink } from "react-router-dom";
           </Typography>
           <Typography variant="body2" color="text.secondary">
           {cotegorie.description}
+          </Typography>
+          <Typography style={{fontWeight:"bold",marginTop:10}}>
+          {formatMoney(cotegorie.price)} GNF
           </Typography>
         </CardContent>
       </CardActionArea>

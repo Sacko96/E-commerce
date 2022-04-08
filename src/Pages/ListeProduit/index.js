@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import _ from "lodash";
-import { Box, Container,Typography } from "@material-ui/core";
+import { Box, Container} from "@material-ui/core";
 import ListeProduits from "./ListeProduits";
 
 const ListeProduit = (props) => {
@@ -19,8 +19,6 @@ const ListeProduit = (props) => {
     }
     fetchData()
   }, [])
-  // console.log(listcategorie)
-
 
   const cotegories = _.groupBy(
     listcategorie.filter((categorie) => {
@@ -28,7 +26,6 @@ const ListeProduit = (props) => {
     }),
     "title"
   );
-  console.log(cotegories);
 
   return (
     <>
