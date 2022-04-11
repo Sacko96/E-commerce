@@ -19,6 +19,9 @@ import axios from "axios";
 import { useSelector } from "../../../store";
 // import { getRestoSlug } from "../../../store/actions/search";
 import { useHistory  } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -153,7 +156,18 @@ const LoginForm = ({
                 <FormHelperText error>{errors.submit}</FormHelperText>
               </Box>
             )}
-            <Box mt={2}>
+             <Box mt={1} pl={4}>
+              <Link
+                to="/reset-password"
+                variant="body2"
+                color="textSecondary"
+              >
+               Mot de passe oublié
+              </Link>
+            </Box>
+
+
+            <Box mt={4}>
               <Button
                 style={{backgroundColor:"#0073a6", color:"white"}}
                 disabled={isSubmitting}
@@ -163,6 +177,24 @@ const LoginForm = ({
                 variant="contained"
               >
                 Connexion
+              </Button>
+            </Box>
+            <Box mt={2}/>
+            <hr></hr>
+            <Box mt={2}/>
+             <Typography>Nouveau a kimbeli?</Typography>
+
+             <Box mt={4}>
+              <Button
+                style={{backgroundColor:"#1232", color:"black"}}
+                disabled={isSubmitting}
+                fullWidth
+                component={RouterLink}
+                to="/register"
+                size="large"
+                variant="contained"
+              >
+               Créer un compte
               </Button>
             </Box>
           </form>

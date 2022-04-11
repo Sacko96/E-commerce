@@ -5,10 +5,9 @@ import {
   Toolbar,
   Typography,
   Button,
-  Link,
 } from "@material-ui/core";
 import Logo from "../../../components/Logo";
-import { Link as ReactRouteLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import Recherche from "./Recherche";
 import Menu from "./Menu";
@@ -21,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1px",
   },
   title: {
-    flexGrow: 1,
-    marginRight: theme.spacing(2),
+    // flexGrow: 1,
+    // marginRight: theme.spacing(2),
     // padding:"30px"
   },
   appBar: {
@@ -31,12 +30,15 @@ const useStyles = makeStyles((theme) => ({
   titre: {
     marginLeft: "2rem",
     marginRight: "2rem",
-    backgroundColor: "white",
+    color: "white",
+    paddingTop: "10px",
+    // backgroundColor: "white",
     height: "42px",
   },
-  Senregistre: {
-    backgroundColor: "white",
-    height: "42px",
+  ligne: {
+    borderLeft: "2px solid white",
+    height: "40px",
+    display: "inline-block",
   },
   //   nb: j'ai utiliser padding pour augmenter le height si on
   // trouve un logo plus grang on dimunie
@@ -54,37 +56,25 @@ export default function MenuAppBar() {
             <Box ml={2} />
           </Hidden>
 
-          <Typography
-            variant="h6"
-            edge="start"
-            aria-label="menu"
-            className={classes.title}
-          >
+          <Typography variant="h6" edge="start" aria-label="menu">
             <Logo />
           </Typography>
-
+          <Box ml={2} flexGrow={1} />
           <Hidden smDown>
             <Recherche />
           </Hidden>
 
+          
           <Hidden mdDown>
-            <Button
-              component={ReactRouteLink}
-              to={"/login"}
+            <Link
+              to="/login"
               className={classes.titre}
               variant="contained"
               //color="primary"
             >
-              Se connecter
-            </Button>
-            <Button
-              component={ReactRouteLink}
-              to={"/register"}
-              variant="contained"
-              className={classes.Senregistre}
-            >
-              S'enregistrer
-            </Button>
+              Se connecter / S'enregistrer
+            </Link>
+            <Box className={classes.ligne}></Box>
           </Hidden>
 
           <Hidden mdUp>
