@@ -68,6 +68,11 @@ const routes = [
         path: "/ListeProduit/:key",
         component: lazy(() => import("./Pages/ListeProduit")),
       },
+      {
+        exact: true,
+        path: "/Confirmation",
+        component: lazy(() => import("./Pages/Confirmation")),
+      },
 
 
 
@@ -81,10 +86,7 @@ const routes = [
         exact: true,
         path: "/reset-password",
         component: lazy(() => import("./Pages/auth/ResetPasswordPage")),
-      },
-      
-    
-      
+      }, 
     ]
   },
  

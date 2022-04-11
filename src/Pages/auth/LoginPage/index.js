@@ -55,22 +55,6 @@ const LoginPage = () => {
             >
               <LoginForm />
             </Box>
-            <Box display="flex" justifyContent="space-between">
-              <Link
-                to="/reset-password"
-                variant="body2"
-                color="textSecondary"
-              >
-               Mot de passe oublié
-              </Link>
-              <Link
-                to="/register"
-                variant="body2"
-                color="textSecondary"
-              >
-                 S'inscrire
-              </Link>
-            </Box>
           </CardContent>
         </Card>
       </Container>
