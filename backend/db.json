@@ -2,39 +2,65 @@
   "categorie": [
     {
       "id": 1,
-      "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS589TfupGdHO3Iu9js85ouZV8NMXSIFR8PyA&usqp=CAU",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS589TfupGdHO3Iu9js85ouZV8NMXSIFR8PyA&usqp=CAU",
       "title": "Ecouteur",
       "slug": "Écouteurs"
     },
     {
       "id": 2,
-      "photo":"https://sc04.alicdn.com/kf/Hcb6688aedc7d4b20a02335b4537cdf10W.jpg",
+      "photo": "https://sc04.alicdn.com/kf/Hcb6688aedc7d4b20a02335b4537cdf10W.jpg",
       "title": "Telephone",
       "slug": "Telephone"
     },
     {
       "id": 3,
-      "photo":"https://www.presse-citron.net/app/uploads/2018/11/meilleure-banque-image.jpg",
+      "photo": "https://www.presse-citron.net/app/uploads/2018/11/meilleure-banque-image.jpg",
       "title": "Pochette",
       "slug": "Pochettes"
     },
     {
       "id": 4,
-      "photo":"https://progsm.tn/wp-content/uploads/2020/06/ipx.jpg",
+      "photo": "https://progsm.tn/wp-content/uploads/2020/06/ipx.jpg",
       "title": "Anti-casse",
       "slug": "Anti-casses"
     },
     {
       "id": 5,
-      "photo":"https://st.depositphotos.com/1035350/2983/i/600/depositphotos_29836689-stock-photo-mt-fuji-in-the-autumn.jpg",
+      "photo": "https://st.depositphotos.com/1035350/2983/i/600/depositphotos_29836689-stock-photo-mt-fuji-in-the-autumn.jpg",
       "title": "Chargeur",
       "slug": "Chargeurs"
     },
     {
       "id": 6,
-      "photo":"https://deep-image.ai/assets/image-realestate.ea3f2c18.webp",
+      "photo": "https://deep-image.ai/assets/image-realestate.ea3f2c18.webp",
       "title": "Autres",
       "slug": "Autres"
+    }
+  ],
+  "emlploye": [
+    {
+      "id": 3,
+      "first_name": "Ann",
+      "last_name": "Smith",
+      "email": "ann@javatpoint.com"
+    },
+    {
+      "first_name": "mamadou ",
+      "last_name": "Diallo",
+      "email": "Saliou@gmail.com",
+      "id": 4
+    },
+    {
+      "first_name": "amadou",
+      "last_name": "Diallo",
+      "email": "amadou@gmail.com",
+      "id": 5
+    },
+    {
+      "first_name": "fatou resto",
+      "last_name": "Sow",
+      "email": "fatouresto@gmail.com",
+      "id": 6
     }
   ],
   "sousCategorie": [
@@ -43,7 +69,7 @@
       "photo": "https://blog.pieces2mobile.com/wp-content/uploads/2020/07/rock-space-film-de-protection-hydrogel-anti-casse-matte-lot-x50-1.jpg",
       "title": "Glass 21D Samsung",
       "nom": "A10",
-      "description": "hshshshs",
+      "description": "Découvrez tout ce dont vous avez besoin pour modernisez votre espace",
       "price": 7000,
       "slug": "Anti-casses"
     },
@@ -52,8 +78,9 @@
       "photo": "https://progsm.tn/wp-content/uploads/2020/06/ipx.jpg",
       "title": "Glass 21D Samsung",
       "nom": "A10S",
-      "description": "hshshshs",
+      "description": "Les plaisirs de l’été sont à nos portes!",
       "price": 5000,
+      "descri":"Jusqu’à 300 $ d'économie Jusqu'à épuisement des stocks",
       "slug": "Anti-casses"
     },
     {
@@ -61,7 +88,7 @@
       "photo": "https://cdn.store-factory.com/www.lapommediscount.com/content/product_10849422b.jpg?v=1571215047",
       "title": "Glass 21D Samsung",
       "nom": "A11",
-      "description": "hshshshs",
+      "description": "Offres exclusives sur les téléphones intelligents",
       "price": 9000,
       "slug": "Anti-casses"
     },
@@ -70,7 +97,7 @@
       "photo": "https://www.wiki.tn/30045-thickbox_default/film-anti-casse-glass-pour-s9.jpg",
       "title": "Glass Tecno",
       "nom": "F1",
-      "description": "hshshshs",
+      "description": "Les économies sur les électroménagers continuent",
       "price": 7000,
       "slug": "Anti-casses"
     },
@@ -79,7 +106,7 @@
       "photo": "https://www.wiki.tn/30044/film-anti-casse-glass-pour-s9.jpg",
       "title": "Glass Tecno",
       "nom": "pop2f",
-      "description": "hshshshs",
+      "description": "Keter - Coffre de jardin Grande de 624 L (165 gal)",
       "price": 8000,
       "slug": "Anti-casses"
     },
@@ -88,7 +115,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8auzLhi5KuyOVQAAPjafKQkzCgvrCs61l4g&usqp=CAU",
       "title": "Glass Tecno",
       "nom": "pop2+",
-      "description": "hshshshs",
+      "description": "Hidden Wild - Hamac de voyage double",
       "price": 3000,
       "slug": "Anti-casses"
     },
@@ -97,7 +124,7 @@
       "photo": "https://tn.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/62/3753/2.jpg?4483",
       "title": "Glass IPhone",
       "nom": "11proMax",
-      "description": "hshshshs",
+      "description": "Sony - Téléviseur intelligent Google 4K HDR 65 po KD65X85J",
       "price": 11000,
       "slug": "Anti-casses"
     },
@@ -106,7 +133,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4qYIDLl-oNQEk0xblGG6iMXU2Yz_NMug2Q&usqp=CAU",
       "title": "Glass IPhone",
       "nom": "12pro",
-      "description": "hshshshs",
+      "description": "Montre Huawei Watch GT3 46mm Noir Actif",
       "price": 12000,
       "slug": "Anti-casses"
     },
@@ -115,7 +142,7 @@
       "photo": "https://tn.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/63/1392/1.jpg?1192",
       "title": "Glass IPhone",
       "nom": "12proMax",
-      "description": "hshshshs",
+      "description": "Defender Guard Wi-Fi. Caméra de sécurité filaire IP 2K à alimentation enfichable, intérieur et extérieur, paquet de 2",
       "price": 6000,
       "slug": "Anti-casses"
     },
@@ -133,7 +160,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-uEUsiZcCb2BZtZsnriM8ruHbS7hUSfBE3KFgLMOzerVjKLrngXIrR6Wx1EZ0ZTLSZ0&usqp=CAU",
       "title": "Pochette Samsung silicon",
       "nom": "A40",
-      "description": "hshshshs",
+      "description": "Husqvarna - Laveuse a pression au gaz 3200 PSI 2.5 GPM",
       "price": 4000,
       "slug": "Pochettes"
     },
@@ -142,7 +169,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5EZdWTCuZElRu3VXF_4DnDgUtdZZwHcaDwfyQGjHDPAeHXZowcHlmkC9zUpZ7ugzI6Uc&usqp=CAU",
       "title": "Pochette Samsung silicon",
       "nom": "J4",
-      "description": "hshshshs",
+      "description": "NewAge Products – Mobilier de rangement 8 pièces Bold Series",
       "price": 9000,
       "slug": "Pochettes"
     },
@@ -151,7 +178,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4SzWJQRqCNDEF2xM-KB-Okphg-9jgEeo_A&usqp=CAU",
       "title": "Pochette Tecno silicon",
       "nom": "camon15",
-      "description": "hshshshs",
+      "description": "Sony - Téléviseur intelligent Google 4K HDR 65 po KD65X85J",
       "price": 5000,
       "slug": "Pochettes"
     },
@@ -160,7 +187,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJx52h7bq2ZzEChRBjmI5No3vsVcoad-146g&usqp=CAU",
       "title": "Pochette Tecno silicon",
       "nom": "pop4pro",
-      "description": "hshshshs",
+      "description": "NewAge Products – Mobilier de rangement 8 pièces Bold Series",
       "price": 4000,
       "slug": "Pochettes"
     },
@@ -169,7 +196,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT92jeJgG1jn9vMlr4qzLxwNOO8ZmrkGlI0JQ&usqp=CAU",
       "title": "Pochette Tecno silicon",
       "nom": "camon18i",
-      "description": "hshshshs",
+      "description": "Nous avons trouvé 10 résultat(s) pour « HP0307",
       "price": 9000,
       "slug": "Pochettes"
     },
@@ -178,7 +205,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWfGgAfxPKju9RCWUy0jYvTpnY1E6pk2iTag&usqp=CAU",
       "title": "Pochette IPhone silicon",
       "nom": "7",
-      "description": "hshshshs",
+      "description": "Elizabeth Arden – Crème complexe hydratante Visible Difference - 2 pots",
       "price": 5000,
       "slug": "Pochettes"
     },
@@ -187,7 +214,7 @@
       "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkHPqjA2wJ0gD7yFnJ8nc2sRHDLot3LK8qDg&usqp=CAU",
       "title": "Pochette IPhone silicon",
       "nom": "11pro",
-      "description": "hshshshs",
+      "description": "Salome – Pavillon de jardin double de 10 pi x 14 pi",
       "price": 4000,
       "slug": "Pochettes"
     },

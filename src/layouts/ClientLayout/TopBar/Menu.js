@@ -72,90 +72,112 @@ const Menu = () => {
   };
 
   const list = (anchor) => (
-    <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <Box display="flex" justifyContent="center" mt={2}>
-        <Avatar />
+    <>
+      <Box
+        sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+        role="presentation"
+        onClick={toggleDrawer(anchor, false)}
+        onKeyDown={toggleDrawer(anchor, false)}
+      >
+        <Box display="flex" justifyContent="center" mt={2}>
+          <Avatar />
+        </Box>
+        <Typography
+          style={{
+            fontSize: "15px",
+            paddingTop: "10px",
+            textAlign: "center",
+          }}
+        >
+          Idris Sacko
+        </Typography>
+
+        <Typography
+          style={{
+            fontSize: "15px",
+            paddingTop: "2px",
+            paddingLeft: "10px",
+          }}
+        >
+          idrissasacko0@gmail.com
+        </Typography>
+
+        <Typography
+          style={{
+            fontSize: "15px",
+            paddingTop: "2px",
+            paddingLeft: "10px",
+          }}
+        >
+          625 22 88 80
+        </Typography>
+
+        <Typography
+          style={{
+            fontSize: "15px",
+            paddingTop: "2px",
+            paddingLeft: "10px",
+          }}
+        >
+          Liste des commandes
+        </Typography>
+        <Box pt={2} />
+        <Divider />
+
+        <Typography
+          style={{
+            fontSize: "16px",
+            marginLeft: 50,
+            paddingTop: "10px",
+            fontWeight: "bold",
+          }}
+        >
+          Catégories
+        </Typography>
+
+        {categorie.map((text) => {
+          return (
+            <Box
+              style={{ marginBottom: 7 }}
+              sx={{
+                typography: 'body1',
+                '& > :not(style) + :not(style)': {
+                  ml: 2,
+                },
+              }}
+              onClick={preventDefault}
+            >
+              <Link style={{
+                fontSize: 18,
+                marginLeft: 50,
+                color: "black",
+                textDecoration: "none"
+              }}
+                component={ReactRouteLink} to={`/ListeProduit/${text.slug}`}>{text.title}</Link>
+            </Box>
+          );
+        })}
       </Box>
-      <Typography
-        style={{
-          fontSize: "15px",
-          paddingTop: "10px",
-          textAlign: "center",
-        }}
-      >
-        Idris Sacko
-      </Typography>
 
-      <Typography
-        style={{
-          fontSize: "15px",
-          paddingTop: "2px",
-          paddingLeft: "10px",
+      {/* <Box
+        style={{ marginBottom: 7 }}
+        sx={{
+          typography: 'body1',
+          '& > :not(style) + :not(style)': {
+            ml: 2,
+          },
         }}
+        onClick={preventDefault}
       >
-        idrissasacko0@gmail.com
-      </Typography>
-
-      <Typography
-        style={{
-          fontSize: "15px",
-          paddingTop: "2px",
-          paddingLeft: "10px",
-        }}
-      >
-        625 22 88 80
-      </Typography>
-
-      <Typography
-        style={{
-          fontSize: "15px",
-          paddingTop: "2px",
-          paddingLeft: "10px",
-        }}
-      >
-        Liste des commandes
-      </Typography>
-      <Box pt={2} />
-      <Divider />
-
-      <Typography
-        style={{
-          fontSize: "16px",
+        <Link style={{
+          fontSize: 18,
           marginLeft: 50,
-          paddingTop: "10px",
-          fontWeight: "bold",
+          color: "black",
+          textDecoration: "none"
         }}
-      >
-        Catégories
-      </Typography>
-
-      {categorie.map((text) => {
-        return (
-          <Box
-          style={{marginBottom:7}}
-            sx={{
-              typography: 'body1',
-              '& > :not(style) + :not(style)': {
-                ml: 2,
-              },
-            }}
-            onClick={preventDefault}
-          >
-            <Link style={{
-              fontSize: 18,
-               marginLeft: 50,
-               color:"black",
-               textDecoration: "none"            }}
-              component={ReactRouteLink} to={`/ListeProduit/${text.slug}`}>{text.title}</Link>
-          </Box>
-        );
-      })}
-    </Box>
+          component={ReactRouteLink} to={`/ListeTablbe`}>liste</Link>
+      </Box> */}
+    </>
   );
 
   return (

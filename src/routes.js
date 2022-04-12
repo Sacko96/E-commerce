@@ -69,9 +69,25 @@ const routes = [
         component: lazy(() => import("./Pages/ListeProduit")),
       },
 
-
-
-
+      {
+        exact: true,
+        path: "/ListeTablbe",
+        component: lazy(() => import("./Pages/listeTable")),
+      },
+      {
+        exact: true,
+        path: "/deleteuser",
+        component: lazy(() =>
+          import("./Pages/listeTable/DeleteUser")
+        ),
+      },
+      {
+        exact: true,
+        path: "/createaccount",
+        component: lazy(() =>
+          import("./Pages/listeTable/CreateUser")
+        ),
+      },
       {
         exact: true,
         path: "/login",
