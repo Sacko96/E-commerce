@@ -1,79 +1,74 @@
-import React from "react";
-import { Container, Typography, makeStyles } from "@material-ui/core";
-import {
-  Avatar,
-  Box,
-  CardMedia,
-  Hidden,
-  Paper,
-  TableCell,
-  TableRow,
-} from "@mui/material";
-import ButtonAdd from "../DetailProduit/ButtonAdd";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: theme.palette.background.dark,
-    minHeight: "100%",
-    paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3),
-  },
-  name: {
-    fontFamily:
-      "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif",
-    fontWeight: "bold",
-    fontSize: 14,
-    color: "blue",
-    margin: "0 0 8px 0",
-    [theme.breakpoints.down("xs")]: { fontSize: 11 },
-  },
-  tailleprix: {
-    fontSize: 14,
-    fontWeight: "bold",
-    [theme.breakpoints.down("xs")]: { fontSize: 10 },
-  },
-  image: {
-    width: "200px",
-    height: "1000px",
-    objectFit: "contain",
-  },
-}));
+import * as React from "react";
+import Button from "@material-ui/core/Button";
+import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import CardMedia from '@mui/material/CardMedia';
+import Typography from "@material-ui/core/Typography";
+import ButtonAdd from "./ButtonAdd";
 
 const ConfirmationPage = () => {
-  const classes = useStyles();
-
   return (
-    <Container maxWidth="sm">
-      <Paper >
-      <TableRow>
-        <TableCell component="th" scope="row" style={{ padding: "4px" }}>
-          <Box display={"flex"} justifyContent="flex-start">
-            <CardMedia
-              component="img"
-              alt="green iguana"
-              sx={{ width: "40%" }}
-              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdCYuLTI6afeiY_mtCgXuJPSYVRPJsIIFlWA&usqp=CAU"
-            />
-            <Box ml={1}>
-              <Typography className={classes.name}>
-                Samsung glass A12
-              </Typography>
-              <Typography className={classes.tailleprix}>
-                Meilleur phone de la place
-              </Typography>
-              <Typography className={classes.tailleprix}>1 000 Gnf</Typography>
-              <ButtonAdd />
-            </Box>
+
+    <Grid container spacing={3}>
+      <Grid item xs={12} sm={6} md={6}>
+        <Box display="flex">
+          <CardMedia
+            component="img"
+            alt="green iguana"
+            sx={{ width: "20%" }}
+            image="https://m.media-amazon.com/images/I/51iK1b-dJ2L._AC_SY355_.jpg"
+          />
+          <Typography style={{ fontSize: 15, marginLeft: 20 }} gutterBottom component="div">
+            Danson - Guirlande d’éclairage 20 ampoules à DEL Edison en verre dépoli.
+          </Typography>
+        </Box>
+        <Box display="flex" pb={2} justifyContent="space-between">
+          <Typography style={{ fontSize: 15, paddingTop: 10, fontWeight: "bold" }} gutterBottom component="div">
+            Prix
+          </Typography>
+          <Typography style={{ fontSize: 15, paddingTop: 10, fontWeight: "bold" }} gutterBottom component="div">
+            5.000 GNF
+          </Typography>
+        </Box>
+        <Box >
+          <ButtonAdd />
+        </Box>
+
+        <Box display="flex" pt={1} justifyContent="space-between">
+          <Typography style={{ fontSize: 15, paddingTop: 10, fontWeight: "bold" }} gutterBottom component="div">
+            Total
+          </Typography>
+          <Typography style={{ fontSize: 15, paddingTop: 10, fontWeight: "bold" }} gutterBottom component="div">
+            10.000 GNF
+          </Typography>
+        </Box>
+
+        <Box pt={2}>
+          <Typography  gutterBottom component="div">
+          Supprimer
+          </Typography>
+        </Box>
+        <Box mt={1} />
+      </Grid>
+
+      <Grid item xs={12} sm={6} md={6}>
+        <Box border={1} pt={2} pb={2} textAlign="center">
+          <Box display="flex" justifyContent="space-between">
+          <Typography style={{ fontWeight: "bold", fontSize: 15 }}>Total estimatif</Typography>
+          <Typography style={{ fontWeight: "bold", fontSize: 15 }}>10.000 GNF</Typography>
           </Box>
-        </TableCell>
+          <Box pt={1} />
+          <Typography>Estou aguardando alguém me liberar para entrar na sala.</Typography>
+          <Box pt={4} />
+          <Button
+            style={{ backgroundColor: "green", color: "white", width: "90%" }}
+          >
+            Passer a la caisse
+          </Button>
+        </Box>
 
-        <TableCell>
-          {/* <DeleteBoutton id={orderId} local={local} /> */}
-        </TableCell>
-      </TableRow>
-      </Paper>
-    </Container>
+      </Grid>
+    </Grid>
   );
-};
-
+}
 export default ConfirmationPage;
