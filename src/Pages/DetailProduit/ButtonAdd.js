@@ -25,15 +25,21 @@ const useStyles = makeStyles((theme) => ({
   value: {
     padding: "0px 70px",
     [theme.breakpoints.down("sm")]: {
-      padding: "0px 40px",
+      padding: "0px 20px",
     },
   },
   btn: {
     backgroundColor: "#DCDCDC",
   },
+  value1: {
+    padding: "0px 20px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "0px 10px",
+    },
+  },
 }));
 
-const ButtonAdd = () => {
+const ButtonAdd = ({ conf = false }) => {
   const classes = useStyles();
   const [count, setCount] = useState(1);
 
@@ -44,7 +50,11 @@ const ButtonAdd = () => {
           <Remove />
         </Button>
       </Box>
-      <span className={classes.value}>{count}</span>
+      {!conf ? (
+        <span className={classes.value}>{count}</span>
+      ) : (
+        <span className={classes.value1}>{count}</span>
+      )}
       <Box className={classes.btn}>
         <Button onClick={() => setCount(count + 1)}>
           <Add />

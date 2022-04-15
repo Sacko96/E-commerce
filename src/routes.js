@@ -103,6 +103,11 @@ const routes = [
         path: "/reset-password",
         component: lazy(() => import("./Pages/auth/ResetPasswordPage")),
       }, 
+      {
+        exact: true,
+        path: "/account/profil",
+        component: lazy(() => import("./Pages/Account/General")),
+      }, 
     ]
   },
  
