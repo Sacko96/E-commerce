@@ -1,4 +1,4 @@
-import * as React from "react";
+import React,{useState} from "react";
 import { Grid } from "@mui/material";
 import { makeStyles,Button} from "@material-ui/core";
 import { Box } from "@mui/system";
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ConfirmationPage = () => {
   const classes = useStyles();
+  const [count, setCount] = useState(1);
 
   return (
 
@@ -45,7 +46,7 @@ const ConfirmationPage = () => {
           </Typography>
         </Box>
         <Box >
-          <ButtonAdd conf={true}/>
+          <ButtonAdd conf={true} count={count} setCount={setCount}/>
         </Box>
 
         <Box display="flex" pt={1} justifyContent="space-between">

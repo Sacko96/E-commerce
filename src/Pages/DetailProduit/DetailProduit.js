@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
@@ -12,11 +12,26 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import { GrWaypoint } from 'react-icons/gr';
+import axios from "axios";
 
 
 
 
-const DetailProduit = ({ detail }) => {
+const DetailProduit = ({ detail  }) => {
+  const [count, setCount] = useState(1);
+  const addToCard = async () => {
+    try {
+      await axios.post(`http://localhost:8000/panier`,
+      {
+        souscategorieid: detail[0].id,
+        quantite:count,
+        user:2,
+        ordered:"false",
+      }
+      );
+    } catch (error) {}
+  };
+
   return (
     <Card style={{ width: "100%", height: "100%" }}>
       <Breadcrumb />
@@ -91,11 +106,12 @@ const DetailProduit = ({ detail }) => {
             <Box pt={1} />
             <Typography> {detail[0]?.description}</Typography>
             <Box pt={1} />
-            <ButtonAdd />
+            <ButtonAdd count={count} setCount={setCount} />
           </Box>
           <Box pt={4} />
           <Button
             style={{ backgroundColor: "#0073a6", color: "white", width: "100%" }}
+            onClick={addToCard}
           >
             Add to cart
           </Button>

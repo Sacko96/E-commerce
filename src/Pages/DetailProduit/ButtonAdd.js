@@ -39,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ButtonAdd = ({ conf = false }) => {
+const ButtonAdd = ({ conf = false ,count, setCount}) => {
   const classes = useStyles();
-  const [count, setCount] = useState(1);
+  // const [count, setCount] = useState(1);
 
   return (
     <div className={classes.root}>

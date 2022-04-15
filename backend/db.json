@@ -80,7 +80,7 @@
       "nom": "A10S",
       "description": "Les plaisirs de l’été sont à nos portes!",
       "price": 5000,
-      "descri":"Jusqu’à 300 $ d'économie Jusqu'à épuisement des stocks",
+      "descri": "Jusqu’à 300 $ d'économie Jusqu'à épuisement des stocks",
       "slug": "Anti-casses"
     },
     {
@@ -318,7 +318,91 @@
       "slug": "Telephone"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "panier": [
+    {
+      "souscategorieid": 11,
+      "quantite": 7,
+      "user": 1,
+      "ordered": "false",
+      "id": 1
+    },
+    {
+      "souscategorieid": 11,
+      "quantite": 7,
+      "user": 1,
+      "ordered": "false",
+      "id": 2
+    },
+    {
+      "souscategorieid": 11,
+      "quantite": 4,
+      "user": 1,
+      "ordered": "false",
+      "id": 3
+    },
+    {
+      "souscategorieid": 27,
+      "quantite": 3,
+      "user": 1,
+      "ordered": "false",
+      "id": 4
+    },
+    {
+      "souscategorieid": 25,
+      "quantite": 1,
+      "user": 2,
+      "ordered": "false",
+      "id": 5
+    },
+    {
+      "souscategorieid": 26,
+      "quantite": 8,
+      "user": 2,
+      "ordered": "false",
+      "id": 6
+    },
+    {
+      "souscategorieid": 4,
+      "quantite": 1,
+      "user": 2,
+      "ordered": "false",
+      "id": 7
+    },
+    {
+      "souscategorieid": 2,
+      "quantite": 1,
+      "user": 2,
+      "ordered": "false",
+      "id": 8
+    },
+    {
+      "souscategorieid": 7,
+      "quantite": 1,
+      "user": 2,
+      "ordered": "false",
+      "id": 9
+    },
+    {
+      "souscategorieid": 15,
+      "quantite": 1,
+      "user": 2,
+      "ordered": "false",
+      "id": 10
+    },
+    {
+      "souscategorieid": 3,
+      "quantite": 1,
+      "user": 2,
+      "ordered": "false",
+      "id": 11
+    },
+    {
+      "souscategorieid": 2,
+      "quantite": 3,
+      "user": 2,
+      "ordered": "false",
+      "id": 12
+    }
+  ],
+  "order": []
 }
