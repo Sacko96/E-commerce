@@ -1,12 +1,26 @@
 import * as React from "react";
-import Button from "@material-ui/core/Button";
 import { Grid } from "@mui/material";
+import { makeStyles,Button} from "@material-ui/core";
 import { Box } from "@mui/system";
 import CardMedia from '@mui/material/CardMedia';
 import Typography from "@material-ui/core/Typography";
-import ButtonAdd from "./ButtonAdd";
+import ButtonAdd from "../DetailProduit/ButtonAdd";
+
+const useStyles = makeStyles((theme) => ({
+
+  value: {
+    padding: "0px 0px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "0px 0px",
+    },
+  },
+  
+}));
+
 
 const ConfirmationPage = () => {
+  const classes = useStyles();
+
   return (
 
     <Grid container spacing={3}>
@@ -31,7 +45,7 @@ const ConfirmationPage = () => {
           </Typography>
         </Box>
         <Box >
-          <ButtonAdd />
+          <ButtonAdd conf={true}/>
         </Box>
 
         <Box display="flex" pt={1} justifyContent="space-between">
@@ -53,7 +67,7 @@ const ConfirmationPage = () => {
 
       <Grid item xs={12} sm={6} md={6}>
         <Box border={1} pt={2} pb={2} textAlign="center">
-          <Box display="flex" justifyContent="space-between">
+          <Box display="flex" justifyContent="space-around">
           <Typography style={{ fontWeight: "bold", fontSize: 15 }}>Total estimatif</Typography>
           <Typography style={{ fontWeight: "bold", fontSize: 15 }}>10.000 GNF</Typography>
           </Box>

@@ -1,24 +1,16 @@
 import React, { useState } from "react";
 import Badge from "@material-ui/core/Badge";
-import { withStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Box } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Drawer, makeStyles, Avatar } from "@material-ui/core";
-import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import { Typography } from "@mui/material";
-import Link from '@mui/material/Link';
+import Link from "@mui/material/Link";
 import axios from "axios";
+import { Link as RouterLink } from "react-router-dom";
 import _ from "lodash";
 import { Link as ReactRouteLink } from "react-router-dom";
-
 
 const useStyles = makeStyles((theme) => ({
   mobileDrawer: {
@@ -41,8 +33,6 @@ const useStyles = makeStyles((theme) => ({
 const preventDefault = (event) => event.preventDefault();
 
 const Menu = () => {
-
-
   const initialState = [];
   const [categorie, setCategorie] = useState(initialState);
   React.useEffect(() => {
@@ -51,7 +41,7 @@ const Menu = () => {
         const response = await axios.get(`http://localhost:8000/categorie`);
         setCategorie(response.data);
         // }
-      } catch (err) { }
+      } catch (err) {}
     }
     fetchData();
   }, []);
@@ -80,54 +70,52 @@ const Menu = () => {
         onKeyDown={toggleDrawer(anchor, false)}
       >
         <Box display="flex" justifyContent="center" mt={2}>
-          <Avatar />
+          <RouterLink to="/account/profil">
+            <Avatar alt="User" className={classes.avatar} />
+          </RouterLink>
         </Box>
+        <Box mt={2} textAlign="center">
+          <Link
+            component={RouterLink}
+            to="/account/profil"
+            style={{ fontSize: "20px" }}
+            color="textPrimary"
+            underline="none"
+          >
+            {/* {user ? user.first_name + " " + user.last_name : ''} */} Idrissa
+          </Link>
+        </Box>
+        <Box mt={4} />
+
+        <Divider />
         <Typography
           style={{
-            fontSize: "15px",
+            fontSize: "16px",
+            marginLeft: 12,
             paddingTop: "10px",
-            textAlign: "center",
+            fontWeight: "bold",
           }}
         >
-          Idris Sacko
+          Commandes
         </Typography>
-
         <Typography
           style={{
             fontSize: "15px",
             paddingTop: "2px",
+            marginLeft: 12,
             paddingLeft: "10px",
           }}
         >
-          idrissasacko0@gmail.com
-        </Typography>
-
-        <Typography
-          style={{
-            fontSize: "15px",
-            paddingTop: "2px",
-            paddingLeft: "10px",
-          }}
-        >
-          625 22 88 80
-        </Typography>
-
-        <Typography
-          style={{
-            fontSize: "15px",
-            paddingTop: "2px",
-            paddingLeft: "10px",
-          }}
-        >
-          Liste des commandes
+          Listes
         </Typography>
         <Box pt={2} />
+
         <Divider />
 
         <Typography
           style={{
             fontSize: "16px",
-            marginLeft: 50,
+            marginLeft: 12,
             paddingTop: "10px",
             fontWeight: "bold",
           }}
@@ -140,20 +128,25 @@ const Menu = () => {
             <Box
               style={{ marginBottom: 7 }}
               sx={{
-                typography: 'body1',
-                '& > :not(style) + :not(style)': {
+                typography: "body1",
+                "& > :not(style) + :not(style)": {
                   ml: 2,
                 },
               }}
               onClick={preventDefault}
             >
-              <Link style={{
-                fontSize: 18,
-                marginLeft: 50,
-                color: "black",
-                textDecoration: "none"
-              }}
-                component={ReactRouteLink} to={`/ListeProduit/${text.slug}`}>{text.title}</Link>
+              <Link
+                style={{
+                  fontSize: 15,
+                  marginLeft: 25,
+                  color: "black",
+                  textDecoration: "none",
+                }}
+                component={ReactRouteLink}
+                to={`/ListeProduit/${text.slug}`}
+              >
+                {text.title}
+              </Link>
             </Box>
           );
         })}
@@ -211,5 +204,5 @@ const Menu = () => {
       </div>
     </>
   );
-}
+};
 export default Menu;
