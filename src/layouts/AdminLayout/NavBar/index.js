@@ -18,19 +18,21 @@ import {
   Typography,
   makeStyles,
 } from "@material-ui/core";
+
 import {
   Lock as LockIcon,
   UserPlus as UserPlusIcon,
   AlertCircle as AlertCircleIcon,
   User as UserIcon,
   PieChart as PieChartIcon,
+  GiMealicon as GiMeal,
 } from "react-feather";
-import Logo from "../../../components/Logo";
+import Logo from "../../../components/Logo/index";
 import NavItem from "./NavItem";
 import { useSelector } from "../../../store";
 import { connect } from "react-redux";
 import { logout } from "../../../store/actions/auth";
-import * as constant from "../../../constants";
+import * as constant from "../../../constants/index";
 
 const sections = [
   {
@@ -39,38 +41,29 @@ const sections = [
       {
         title: "Tableau de bord",
         icon: PieChartIcon,
-        href: "/listdevise",
+        href: "/dashboardAdmin",
       },
     ],
   },
-  // {
-  //   subheader: "Management",
-  //   items: [
-  //     {
-  //       title: "Liste des Cours",
-  //       href: "/dashboard/management/trainings",
-  //       icon: LockIcon,
-  //     },
-  //     {
-  //       title: "Ajouter des Cours",
-  //       href: "/dashboard/management/training/create",
-  //       icon: UserPlusIcon,
-  //     },
-  //   ],
-  // },
+  
+  {
+    subheader: "Management",
+    items: [
+      {
+        title: "Listes des commandes",
+        href: "/dashboardAdmin/listcommande",
+        icon: UserPlusIcon,
+      },
+    ],
+  },
   {
     subheader: "Compte",
     items: [
       {
         title: "Compte",
-        href: "/listdevise/account",
+        href: "/dashboardAdmin/account",
         icon: UserIcon,
       },
-      // {
-      //   title: 'Profil',
-      //   href: '/dashboard/profile',
-      //   icon: AlertCircleIcon
-      // }
     ],
   },
 ];
@@ -247,19 +240,19 @@ const NavBar = ({ onMobileClose, openMobile }) => {
   );
 
   return (
-    <>
-      <Hidden lgUp>
+    <React.Fragment>
+      {/* <Hidden lgUp> */}
         <Drawer
           anchor="left"
-          classes={{ paper: classes.mobileDrawer }}
+          classes={{ paper: classes.desktopDrawer }}
           onClose={onMobileClose}
           open={openMobile}
           variant="temporary"
         >
           {content}
         </Drawer>
-      </Hidden>
-      <Hidden mdDown>
+      {/* </Hidden> */}
+      {/* <Hidden mdDown>
         <Drawer
           anchor="left"
           classes={{ paper: classes.desktopDrawer }}
@@ -268,8 +261,8 @@ const NavBar = ({ onMobileClose, openMobile }) => {
         >
           {content}
         </Drawer>
-      </Hidden>
-    </>
+      </Hidden> */}
+    </React.Fragment>
   );
 };
 

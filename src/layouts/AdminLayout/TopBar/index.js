@@ -12,21 +12,12 @@ import {
   SvgIcon
 } from '@material-ui/core';
 import { Menu as MenuIcon } from 'react-feather';
-import Logo from '../../../components/Logo';
-import { THEMES } from '../../../theme/constants';
-import Account from './Account';
-
+import Logo from '../../../components/Logo/index';
+import CommandeNotice from './CommandeNotice';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    zIndex: theme.zIndex.drawer + 100,
-    ...theme.name === THEMES.LIGHT ? {
-      boxShadow: 'none',
-      backgroundColor: "#210557"
-    } : {},
-    ...theme.name === THEMES.ONE_DARK ? {
-      backgroundColor: theme.palette.background.default
-    } : {}
+   
   },
   toolbar: {
     minHeight: 64
@@ -46,7 +37,6 @@ const TopBar = ({
       {...rest}
     >
       <Toolbar className={classes.toolbar}>
-        <Hidden lgUp>
           <IconButton
             color="inherit"
             onClick={onMobileNavOpen}
@@ -55,19 +45,19 @@ const TopBar = ({
               <MenuIcon />
             </SvgIcon>
           </IconButton>
-        </Hidden>
-        {/* <Hidden xsDown>
-          <RouterLink to="/">
+        
+       
+          <RouterLink to="/dashboardAdmin">
             <Logo />
           </RouterLink>
-        </Hidden> */}
+       
         <Box
           ml={2}
           flexGrow={1}
         />
-        {/* <Settings /> */}
+        <CommandeNotice/>
         <Box ml={2}>
-          <Account />
+         
         </Box>
       </Toolbar>
     </AppBar>

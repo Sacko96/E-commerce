@@ -1,5 +1,5 @@
-import React, { Suspense, Fragment,lazy} from "react";
-import { Switch, Route, Redirect } from 'react-router-dom';
+import React, { Suspense, Fragment, lazy } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
 import ClientLayout from "./layouts/ClientLayout";
 import AdminLayout from "./layouts/AdminLayout";
 import HomePage from "./Pages/Home";
@@ -39,11 +39,26 @@ export const renderRoutes = (routes = []) => (
   </Suspense>
 );
 
-
-
 const routes = [
- 
+  {
+    path: "/dashboardAdmin",
+    //guard: AuthGuard,
+    layout: AdminLayout,
+    routes: [
+      {
+        exact: true,
+        path: "/dashboardAdmin",
+        component: lazy(() => import("./Pages/dashboardAdmin")),
+      },
+      {
+        exact: true,
+        path: "/dashboardAdmin/listcommande",
+        component: lazy(() => import("./Pages/dashboardAdmin/AllCommandes")),
+      },
+    ],
+  },
 
+  
   {
     path: "*",
     layout: ClientLayout,
@@ -82,16 +97,12 @@ const routes = [
       {
         exact: true,
         path: "/deleteuser",
-        component: lazy(() =>
-          import("./Pages/listeTable/DeleteUser")
-        ),
+        component: lazy(() => import("./Pages/listeTable/DeleteUser")),
       },
       {
         exact: true,
         path: "/createaccount",
-        component: lazy(() =>
-          import("./Pages/listeTable/CreateUser")
-        ),
+        component: lazy(() => import("./Pages/listeTable/CreateUser")),
       },
       {
         exact: true,
@@ -102,28 +113,22 @@ const routes = [
         exact: true,
         path: "/reset-password",
         component: lazy(() => import("./Pages/auth/ResetPasswordPage")),
-      }, 
+      },
       {
         exact: true,
         path: "/account/profil",
         component: lazy(() => import("./Pages/Account/General")),
-      }, 
-    ]
+      },
+    ],
   },
- 
+
   {
     exact: true,
     path: "/404",
     component: lazy(() => import("./Pages/errors/NotFoundPage")),
   },
-  
- 
-  
+
   
 ];
-
-
-
-
 
 export default routes;
