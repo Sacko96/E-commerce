@@ -61,7 +61,7 @@ const Account = ({ logout }) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Box
         display="flex"
         alignItems="center"
@@ -99,12 +99,12 @@ const Account = ({ logout }) => {
         >
           Profile
         </MenuItem> */}
-        <MenuItem component={RouterLink} onClick={handleClose} to="/listdevise/account">
+        <MenuItem component={RouterLink} onClick={handleClose} to="/dashboard/account">
           Account
         </MenuItem>
         <MenuItem onClick={handleLogout}>Logout</MenuItem>
       </Menu>
-    </>
+    </React.Fragment>
   );
 };
 

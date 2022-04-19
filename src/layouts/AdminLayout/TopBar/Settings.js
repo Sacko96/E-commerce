@@ -67,7 +67,7 @@ const Settings = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Tooltip title="Settings">
         <Badge
           color="secondary"
@@ -165,7 +165,7 @@ const Settings = () => {
           </Button>
         </Box>
       </Popover>
-    </>
+    </React.Fragment>
   );
 }
 
